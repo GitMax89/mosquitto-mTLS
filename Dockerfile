@@ -20,5 +20,5 @@ RUN apk add --upgrade mosquitto && rc-update add mosquitto boot && \
     chown -R mosquitto:mosquitto /etc/mosquitto && \
     chmod 755 /etc/mosquitto/certs/*
 
-EXPOSE 1883 8883
+EXPOSE 8883
 CMD ["mosquitto", "-c", "/etc/mosquitto/config/mosquitto.conf"]
