@@ -1,6 +1,6 @@
 # mosquitto-mTLS
 
-<b>install:</b>
+<b>Install</b>
 
 Pull the following images from docker.io                                             
 ```sh
@@ -79,3 +79,11 @@ If everything is correct the created tree should look like this
 
 
 Finally, run nats-server and Enjoy!
+
+
+<b>Remove</b>
+
+Execute
+```sh
+./remove.sh
+```
