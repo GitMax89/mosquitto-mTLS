@@ -26,6 +26,10 @@ openssl req -new -key client1-key.pem -out client1-csr.pem
 openssl x509 -req -days 9999 -in client1-csr.pem -CA ca-crt.pem -CAkey ca-key.pem -CAcreateserial -out client1-crt.pem
 openssl verify -CAfile ca-crt.pem client1-crt.pem (if there are errors repeat the procedure)
 
+<<<<<<< HEAD
+=======
+2) enter your local volume on build.sh and then run it 
+>>>>>>> a2ea156c19d92095fd9cb85dc861c931346895fd
 ```
 
 Create mosquitto.conf on /srv/mosquitto/config and insert a following line:
