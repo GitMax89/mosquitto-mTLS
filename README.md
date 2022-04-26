@@ -77,3 +77,5 @@ If everything is correct the created tree should look like this
 
 ```
 
+
+Finally, run nats-server and Enjoy!

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker stop mosquitto-tls
-docker rm mosquitto-tls
-docker rmi $(docker images | grep mosquitto-alpine | awk '{print $3}')
+docker stop mosquitto-ssl
+docker rm mosquitto-ssl
+docker rmi $(docker images | grep eclipse.*1.6.15-openssl | awk '{print $3}')
