@@ -30,7 +30,7 @@ openssl verify -CAfile ca-crt.pem client1-crt.pem (if there are errors repeat th
 
 Create mosquitto.conf on /srv/mosquitto/config and insert a following line:
 ```sh
-sudo nano /srv/mosquitto/config/mosqitto.conf
+sudo nano /srv/mosquitto/config/mosquitto.conf
 
 port 8883
 
