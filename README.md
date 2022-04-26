@@ -26,15 +26,11 @@ openssl req -new -key client1-key.pem -out client1-csr.pem
 openssl x509 -req -days 9999 -in client1-csr.pem -CA ca-crt.pem -CAkey ca-key.pem -CAcreateserial -out client1-crt.pem
 openssl verify -CAfile ca-crt.pem client1-crt.pem (if there are errors repeat the procedure)
 
-<<<<<<< HEAD
-=======
-2) enter your local volume on build.sh and then run it 
->>>>>>> a2ea156c19d92095fd9cb85dc861c931346895fd
 ```
 
 Create mosquitto.conf on /srv/mosquitto/config and insert a following line:
 ```sh
-sudo cat /srv/mosquitto/config/mosqitto.conf
+sudo nano /srv/mosquitto/config/mosqitto.conf
 
 port 8883
 
@@ -61,7 +57,7 @@ sudo docker run --name mosquitto-ssl -v /srv/mosquitto/config:/mosquitto/config 
 
 Create mosquitto.passwd on /srv/mosquitto/mosquitto.passwd
 ```sh
-docker exec -it mosquitto-ssl sh -c "touch mosquitto.passwd /srv/mosquitto/ && mosquitto_passwd -b /srv/mosquitto/mosquitto.passwd mosquitto 123456" 
+docker exec -it mosquitto-ssl sh -c "touch /mosquitto/mosquitto.passwd && mosquitto_passwd -b /mosquitto/mosquitto.passwd mosquitto 123456"
 ```
 
 Restart service:
